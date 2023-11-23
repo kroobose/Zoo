@@ -1,12 +1,12 @@
 LFW:
-    pairs_file_path: /export2/wangjun492/face_database/facex-zoo/private_file/test_data/lfw/pairs.txt
-    cropped_face_folder: /export2/wangjun492/face_database/facex-zoo/private_file/test_data/lfw/lfw_crop
-    image_list_file_path: /export2/wangjun492/face_database/facex-zoo/private_file/test_data/lfw/img_list.txt
+    pairs_file_path: /workspace/dataset/evaluation/LFW/pairs.txt
+    cropped_face_folder: /workspace/dataset/evaluation/LFW/crop_data
+    image_list_file_path: /workspace/dataset/evaluation/LFW/crop_data/image_path_lfw.txt
 
 CPLFW:
-    pairs_file_path: /export2/wangjun492/face_database/facex-zoo/private_file/test_data/cplfw/ori_data/pairs_CPLFW.txt
-    cropped_face_folder: /export2/wangjun492/face_database/facex-zoo/private_file/test_data/cplfw/cplfw_crop
-    image_list_file_path: /export2/wangjun492/face_database/facex-zoo/private_file/test_data/cplfw/img_list.txt
+    pairs_file_path: /workspace/dataset/evaluation/CPLFW/pairs_CPLFW.txt
+    cropped_face_folder: /workspace/dataset/evaluation/CPLFW/crop_data
+    image_list_file_path: /workspace/dataset/evaluation/CPLFW/image_path_cplfw.txt
 
 CALFW:
     pairs_file_path: /workspace/dataset/evaluation/CALFW/pairs_CALFW.txt
@@ -19,24 +19,24 @@ AgeDB30:
     image_list_file_path: /export2/wangjun492/face_database/facex-zoo/private_file/test_data/agedb/img_list.txt
 
 RFW_African:
-    pairs_file_path: /export2/wangjun492/face_database/facex-zoo/private_file/test_data/rfw/RFW/images/test/txts/African/African_pairs.txt
-    cropped_face_folder: /export2/wangjun492/face_database/facex-zoo/private_file/test_data/rfw/RFW_crop/African
-    image_list_file_path: /export2/wangjun492/face_database/facex-zoo/private_file/test_data/rfw/RFW_crop/African_img_list.txt
+    pairs_file_path: /workspace/dataset/evaluation/RFW/txts/African/African_pairs.txt
+    cropped_face_folder: /workspace/dataset/evaluation/RFW/crop_data/African
+    image_list_file_path: /workspace/dataset/evaluation/RFW/crop_data/image_path_african.txt
 
 RFW_Asian:
-    pairs_file_path: /export2/wangjun492/face_database/facex-zoo/private_file/test_data/rfw/RFW/images/test/txts/Asian/Asian_pairs.txt
-    cropped_face_folder: /export2/wangjun492/face_database/facex-zoo/private_file/test_data/rfw/RFW_crop/Asian
-    image_list_file_path: /export2/wangjun492/face_database/facex-zoo/private_file/test_data/rfw/RFW_crop/Asian_img_list.txt
+    pairs_file_path: /workspace/dataset/evaluation/RFW/txts/Asian/Asian_pairs.txt
+    cropped_face_folder: /workspace/dataset/evaluation/RFW/crop_data/Asian
+    image_list_file_path: /workspace/dataset/evaluation/RFW/crop_data/image_path_asian.txt
 
 RFW_Caucasian:
-    pairs_file_path: /export2/wangjun492/face_database/facex-zoo/private_file/test_data/rfw/RFW/images/test/txts/Caucasian/Caucasian_pairs.txt
-    cropped_face_folder: /export2/wangjun492/face_database/facex-zoo/private_file/test_data/rfw/RFW_crop/Caucasian
-    image_list_file_path: /export2/wangjun492/face_database/facex-zoo/private_file/test_data/rfw/RFW_crop/Caucasian_img_list.txt
+    pairs_file_path: /workspace/dataset/evaluation/RFW/txts/Caucasian/Caucasian_pairs.txt
+    cropped_face_folder: /workspace/dataset/evaluation/RFW/crop_data/Caucasian
+    image_list_file_path: /workspace/dataset/evaluation/RFW/crop_data/image_path_caucasian.txt
 
 RFW_Indian:
-    pairs_file_path: /export2/wangjun492/face_database/facex-zoo/private_file/test_data/rfw/RFW/images/test/txts/Indian/Indian_pairs.txt
-    cropped_face_folder: /export2/wangjun492/face_database/facex-zoo/private_file/test_data/rfw/RFW_crop/Indian
-    image_list_file_path: /export2/wangjun492/face_database/facex-zoo/private_file/test_data/rfw/RFW_crop/Indian_img_list.txt
+    pairs_file_path: /workspace/dataset/evaluation/RFW/txts/Indian/Indian_pairs.txt
+    cropped_face_folder: /workspace/dataset/evaluation/RFW/crop_data/Indian
+    image_list_file_path: /workspace/dataset/evaluation/RFW/crop_data/image_path_indian.txt
 
 MegaFace:
     facescrub_list: /export/home/wangjun492/wj_armory/face_rec/face_recognition_pytorch/test_protocal/megaface/megaface_test_kit/devkit/templatelists/facescrub_features_list.json

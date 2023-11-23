@@ -12,6 +12,7 @@ services:
     tty: true
     volumes:
       - ~/wf/FaceX-Zoo:/workspace
+      - /FR_dataset/WebFace260M/:/workspace/dataset/WebFace260M
     image: facexzoo
     deploy:
       resources:

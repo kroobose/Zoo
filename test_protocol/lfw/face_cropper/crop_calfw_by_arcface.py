@@ -1,7 +1,7 @@
 """
 @author: Jun Wang
 @date: 20201012
-@contact: jun21wangustc@gmail.com 
+@contact: jun21wangustc@gmail.com
 """
 
 import os
@@ -9,8 +9,9 @@ import sys
 import math
 import multiprocessing
 import cv2
-sys.path.append('/export/home/wangjun492/wj_armory/faceX-Zoo/face_sdk')
-from core.image_cropper.arcface_face_recognition.FaceRecImageCropper import FaceRecImageCropper
+sys.path.append('/workspace/face_sdk')
+from core.image_cropper.arcface_cropper.FaceRecImageCropper import FaceRecImageCropper
+
 
 def crop_calfw(calfw_root, calfw_lmk_root, target_folder):
     face_cropper = FaceRecImageCropper()
@@ -35,9 +36,9 @@ def crop_calfw(calfw_root, calfw_lmk_root, target_folder):
             cur_cropped_image = face_cropper.crop_image_by_mat(cur_image, face_lms)
             target_path = os.path.join(target_folder, cur_file)
             cv2.imwrite(target_path, cur_cropped_image)
-        
+
 if __name__ == '__main__':
-    calfw_root = '/export/home/wangjun492/wj_armory/faceX-Zoo/face_recognition/face_evaluation/calfw/data/images&landmarks/images&landmarks/images'
-    calfw_lmk_root = '/export/home/wangjun492/wj_armory/faceX-Zoo/face_recognition/face_evaluation/calfw/data/images&landmarks/images&landmarks/CA_landmarks'
-    target_folder = '/export/home/wangjun492/wj_armory/faceX-Zoo/face_recognition/face_evaluation/calfw/calfw_crop'
+    calfw_root = '/workspace/dataset/evaluation/CALFW/images&landmarks/images&landmarks/images'
+    calfw_lmk_root = '/workspace/dataset/evaluation/CALFW/images&landmarks/images&landmarks/CA_landmarks'
+    target_folder = '/workspace/dataset/evaluation/CALFW/calfw_crop'
     crop_calfw(calfw_root, calfw_lmk_root, target_folder)

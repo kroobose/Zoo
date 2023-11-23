@@ -1,7 +1,7 @@
 """
 @author: JiXuan Xu, Jun Wang
 @date: 20201015
-@contact: jun21wangustc@gmail.com 
+@contact: jun21wangustc@gmail.com
 """
 # based on:
 # https://github.com/deepinsight/insightface/blob/master/recognition/common/face_align.py
@@ -20,7 +20,7 @@ src1 = np.array([
      [35.740,69.007],
      [51.157,89.050],
      [57.025,89.702]], dtype=np.float32)
-#<--left 
+#<--left
 src2 = np.array([
     [45.031,50.118],
     [65.568,50.872],
@@ -73,7 +73,7 @@ def estimate_norm(lmk, image_size = 112, mode='arcface'):
   lmk_tran = np.insert(lmk, 2, values=np.ones(5), axis=1)
   min_M = []
   min_index = []
-  min_error = float('inf') 
+  min_error = float('inf')
   if mode=='arcface':
     assert image_size==112
     src = arcface_src
@@ -107,7 +107,7 @@ class FaceRecImageCropper(BaseImageCropper):
     """
     def __init__(self):
         super().__init__()
-    
+
     def crop_image_by_mat(self, image, landmarks):
         if len(landmarks) == 106 * 2:
             landmarks = lms106_2_lms5(landmarks)

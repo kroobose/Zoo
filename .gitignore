@@ -2,3 +2,5 @@
 *.pt
 *.log
 *.pth
+/docker/docker-compose.yaml
+others

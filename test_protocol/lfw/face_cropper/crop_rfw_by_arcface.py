@@ -1,6 +1,6 @@
 """
-@author: Jun Wang 
-@date: 20201012 
+@author: Jun Wang
+@date: 20201012
 @contact: jun21wangustc@gmail.com
 """
 
@@ -8,7 +8,9 @@ import os
 import math
 import multiprocessing
 import cv2
-from core.image_cropper.arcface_face_recognition.FaceRecImageCropper import FaceRecImageCropper
+import sys
+sys.path.append('/workspace/face_sdk')
+from core.image_cropper.arcface_cropper.FaceRecImageCropper import FaceRecImageCropper
 
 def crop_rfw(rfw_root, rfw_lms_file, target_folder):
     face_cropper = FaceRecImageCropper()
@@ -41,9 +43,9 @@ def crop_rfw(rfw_root, rfw_lms_file, target_folder):
             cv2.imwrite(target_path, cur_cropped_image)
 
 if __name__ == '__main__':
-    rfw_root = '/export/home/wangjun492/wj_armory/faceX-Zoo/dataset/face_evaluation/rfw/RFW/images/test/data'
-    rfw_face_info_folder = '/export/home/wangjun492/wj_armory/faceX-Zoo/dataset/face_evaluation/rfw/RFW/images/test/txts'
-    target_folder = '/export/home/wangjun492/wj_armory/faceX-Zoo/dataset/face_evaluation/rfw/RFW_crop'
+    rfw_root = '/workspace/dataset/evaluation/RFW/images/test/data'
+    rfw_face_info_folder = '/workspace/dataset/evaluation/RFW/images/test/txts'
+    target_folder = '/workspace/dataset/evaluation/RFW/RFW_crop'
 
     African_root = os.path.join(rfw_root, 'African')
     African_lms_file = os.path.join(rfw_face_info_folder, 'African/African_lmk.txt')

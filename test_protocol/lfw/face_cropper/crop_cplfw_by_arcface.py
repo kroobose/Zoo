@@ -1,5 +1,5 @@
 """
-@author: Jun Wang  
+@author: Jun Wang
 @date: 20201012
 @contact: jun21wangustc@gmail.com
 """
@@ -10,8 +10,8 @@ import math
 import multiprocessing
 
 import cv2
-sys.path.append('/export/home/wangjun492/wj_armory/faceX-Zoo/face_sdk')
-from core.image_cropper.arcface_face_recognition.FaceRecImageCropper import FaceRecImageCropper
+sys.path.append('/workspace/face_sdk')
+from core.image_cropper.arcface_cropper.FaceRecImageCropper import FaceRecImageCropper
 
 def crop_cplfw(cplfw_root, target_folder):
     face_cropper = FaceRecImageCropper()
@@ -36,8 +36,8 @@ def crop_cplfw(cplfw_root, target_folder):
             cur_cropped_image = face_cropper.crop_image_by_mat(cur_image, face_lms)
             target_path = os.path.join(target_folder, cur_file)
             cv2.imwrite(target_path, cur_cropped_image)
-        
+
 if __name__ == '__main__':
-    cplfw_root = '/export/home/wangjun492/wj_armory/faceX-Zoo/face_recognition/face_evaluation/cplfw/data/images'
-    target_folder = '/export/home/wangjun492/wj_armory/faceX-Zoo/face_recognition/face_evaluation/cplfw/cplfw_crop'
+    cplfw_root = '/workspace/dataset/evaluation/CPLFW/images'
+    target_folder = '/workspace/dataset/evaluation/CPLFW/cplfw_crop'
     crop_cplfw(cplfw_root, target_folder)

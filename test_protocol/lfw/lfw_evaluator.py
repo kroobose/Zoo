@@ -7,10 +7,10 @@
 import os
 import sys
 import numpy as np
-    
+
 class LFWEvaluator(object):
     """Implementation of LFW test protocal.
-    
+
     Attributes:
         data_loader(object): a test data loader.
         pair_list(list): the pair list given by PairsParser.
@@ -20,7 +20,7 @@ class LFWEvaluator(object):
         """Init LFWEvaluator.
 
         Args:
-            data_loader(object): a test data loader. 
+            data_loader(object): a test data loader.
             pairs_parser_factory(object): factory to produce the parser to parse test pairs list.
             pair_list(list): the pair list given by PairsParser.
             feature_extractor(object): a feature extractor.
@@ -37,9 +37,9 @@ class LFWEvaluator(object):
 
     def test_one_model(self, test_pair_list, image_name2feature, is_normalize = True):
         """Get the accuracy of a model.
-        
+
         Args:
-            test_pair_list(list): the pair list given by PairsParser. 
+            test_pair_list(list): the pair list given by PairsParser.
             image_name2feature(dict): the map of image name and it's feature.
             is_normalize(bool): wether the feature is normalized.
 
@@ -56,6 +56,7 @@ class LFWEvaluator(object):
             image_name2 = cur_pair[1]
             label = cur_pair[2]
             subsets_label_list[cur_subset][cur_id] = label
+            # print(image_name2feature)
             feat1 = image_name2feature[image_name1]
             feat2 = image_name2feature[image_name2]
             if not is_normalize:
@@ -100,7 +101,7 @@ class LFWEvaluator(object):
         score_min = np.min(score_list)
         score_span = score_max - score_min
         step = score_span / num_thresholds
-        threshold_list = score_min +  step * np.array(range(1, num_thresholds + 1)) 
+        threshold_list = score_min +  step * np.array(range(1, num_thresholds + 1))
         fpr_list = []
         tpr_list = []
         for threshold in threshold_list:

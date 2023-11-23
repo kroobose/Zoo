@@ -1,4 +1,4 @@
-""" 
+"""
 @author: Jun Wang
 @date: 20201012
 @contact: jun21wangustc@gmail.com
@@ -9,7 +9,7 @@ import math
 import multiprocessing
 import cv2
 import sys
-sys.path.append('/export/home/wangjun492/wj_armory/faceX-Zoo/face_sdk')
+sys.path.append('/workspace/face_sdk')
 from core.image_cropper.arcface_face_recognition.FaceRecImageCropper import FaceRecImageCropper
 from utils.lms_trans import lms106_2_lms25
 
@@ -45,9 +45,9 @@ def crop_agedb(agedb_root, target_folder):
         cur_image = cv2.imread(image_path)
         cur_cropped_image = face_cropper.crop_image_by_mat(cur_image, lms)
         cv2.imwrite(target_path, cur_cropped_image)
-                
+
 if __name__ == '__main__':
-    agedb_root = '/export/home/wangjun492/wj_armory/faceX-Zoo/dataset/face_evaluation/agedb/03_Protocol_Images'
-    target_folder = '/export/home/wangjun492/wj_armory/faceX-Zoo/dataset/face_evaluation/agedb/03_Protocol_Images_crop'
+    agedb_root = '/workspace/dataset/evaluation/AgeDB/AgeDB_protocol/03_Protocol_Images'
+    target_folder = '/workspace/dataset/evaluation/AgeDB/AgeDB_protocol/03_Protocol_Images_crop'
 
     crop_agedb(agedb_root, target_folder)
